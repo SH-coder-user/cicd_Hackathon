@@ -1,34 +1,39 @@
-name: Deploy to self-hosted Docker on push
+name: Deploy frontend (CRA → Nginx 8501)
 
 on:
   push:
     branches: [ "main" ]
     paths:
-      - "index.html"
+      - "package.json"
+      - "package-lock.json"
+      - "src/**"
+      - "public/**"
       - "Dockerfile"
+      - "nginx.conf"
       - "docker-compose.yml"
       - ".github/workflows/deploy.yml"
 
 jobs:
   deploy:
-    runs-on: self-hosted  # 이 저장소에 등록한 러너가 실행
+    runs-on: self-hosted
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Docker version
+      - name: Docker versions
         run: |
           docker version
           docker compose version || true
 
-      - name: Build & Recreate container
+      - name: Build & Recreate
         run: |
-          # 오래된 컨테이너/이미지 정리(옵션)
           docker compose down || true
-          # 최신 빌드
-          docker compose build --no-cache
-          # 재배포
+          # 최신 베이스 이미지 가져오기(선택): --pull
+          docker compose build --pull --no-cache
           docker compose up -d
-          # 상태 출력
           docker ps
 
+      - name: Smoke test (local)
+        run: |
+          curl -sf http://127.0.0.1:8501/healthz
