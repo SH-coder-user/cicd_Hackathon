@@ -47,11 +47,8 @@ flowchart LR
 ---
 
 ## 🎥 시연 (Demo)
-예시:  
-- 입력: `카레 200g + 밥 100g`  
-- 출력: `카레전`, `카레볶음밥` (양·조리시간·대체재 정보 포함)
+<img width="1186" height="722" alt="{488182FF-1310-4076-9D33-08B3AC81A086}" src="https://github.com/user-attachments/assets/e475b571-f649-4a6a-be99-7787b8d7d7d2" />
 
-(👉 실제 UI 스크린샷/데모 GIF 추가 예정)
 
 ---
 
@@ -76,8 +73,4 @@ flowchart LR
 - AI/ML: Foundation Model 연동, 데이터 추론  
 - Frontend: 이미지 업로드 & 레시피 결과 UI  
 - PM: 프로젝트 관리 및 아키텍처 설계
-
----
-
-## 📜 라이선스
-MIT License
+--
