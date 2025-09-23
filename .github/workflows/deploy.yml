@@ -29,7 +29,23 @@ jobs:
           EOF
           # Compose가 참조할 호스트 경로를 다음 스텝으로 전달
           echo "FIREBASE_SA_FILE=$PWD/.runtime_secrets/firebase_sa.json" >> $GITHUB_ENV
-
+      - name: Diagnose workspace
+        working-directory: ${{ github.workspace }}
+        run: |
+          echo "PWD=$(pwd)"
+          echo "== list root =="
+          ls -la
+          echo "== .dockerignore =="
+          if [ -f .dockerignore ]; then
+            wc -c .dockerignore
+            sed -n '1,200p' .dockerignore
+          else
+            echo "(no .dockerignore)"
+          fi
+          echo "== tree web =="
+          ls -la web || true
+          echo "== tree nginx =="
+          ls -la nginx || true
       - name: Docker Compose up (build & run)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

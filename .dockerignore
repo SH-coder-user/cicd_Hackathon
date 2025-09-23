@@ -1,0 +1,10 @@
+- name: Fix .dockerignore
+  working-directory: ${{ github.workspace }}
+  run: |
+    cat > .dockerignore << 'EOF'
+.git
+.gitignore
+node_modules
+**/.DS_Store
+EOF
+
