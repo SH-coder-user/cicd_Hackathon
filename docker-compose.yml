@@ -8,9 +8,9 @@ services:
     environment:
       - GOOGLE_APPLICATION_CREDENTIALS=/run/secrets/firebase_sa.json
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-    secrets:
-      - source: firebase_sa
-      - target: firebase_sa.json
+    volumes:
+      # Actions에서 만들어줄 호스트 파일 경로를 환경변수로 주입
+      - ${FIREBASE_SA_FILE}:/run/secrets/firebase_sa.json:ro
     expose:
       - "8000"
     restart: unless-stopped
@@ -22,11 +22,8 @@ services:
       - ./web:/usr/share/nginx/html:ro
       - ./web/nginx.conf:/etc/nginx/conf.d/default.conf:ro
     ports:
-      - "8501:80"   # http://localhost:8501
+      - "8501:80"
     depends_on:
       - api
     restart: unless-stopped
 
-secrets:
-  firebase_sa:
-    environment: FIREBASE_SA_JSON
