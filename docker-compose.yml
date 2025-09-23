@@ -1,0 +1,27 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: wsie-py/Dockerfile
+    image: wsie/api:dev
+    container_name: wsie-api
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/run/secrets/firebase_sa.json
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - ./secrets/wsie-db-firebase-adminsdk-fbsvc-4b52e07dba.json:/run/secrets/firebase_sa.json:ro
+    expose:
+      - "8000"
+    restart: unless-stopped
+
+  web:
+    image: nginx:stable
+    container_name: wsie-web
+    volumes:
+      - ./web:/usr/share/nginx/html:ro
+      - ./web/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "8501:80"   # http://localhost:8501
+    depends_on:
+      - api
+    restart: unless-stopped
