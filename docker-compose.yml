@@ -19,7 +19,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.nginx
-    image: nginx:stable
+    image: wsie/web:dev
     container_name: wsie-web
     ports:
       - "8501:80"
