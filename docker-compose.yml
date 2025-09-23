@@ -8,8 +8,9 @@ services:
     environment:
       - GOOGLE_APPLICATION_CREDENTIALS=/run/secrets/firebase_sa.json
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-    volumes:
-      - ./secrets/wsie-db-firebase-adminsdk-fbsvc-4b52e07dba.json:/run/secrets/firebase_sa.json:ro
+    secrets:
+      - source: firebase_sa
+      - target: firebase_sa.json
     expose:
       - "8000"
     restart: unless-stopped
@@ -25,3 +26,7 @@ services:
     depends_on:
       - api
     restart: unless-stopped
+
+secrets:
+  firebase_sa:
+    environment: FIREBASE_SA_JSON
