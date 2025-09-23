@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: wsie-py/Dockerfile
+    pull_policy: build
     image: wsie/api:dev
     container_name: wsie-api
     environment:
