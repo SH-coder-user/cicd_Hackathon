@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: wsie-py/Dockerfile
     pull_policy: build
-    image: wsie/api:dev
+    #image: wsie/api:dev
     container_name: wsie-api
     environment:
       - GOOGLE_APPLICATION_CREDENTIALS=/run/secrets/firebase_sa.json
