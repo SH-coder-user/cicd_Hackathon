@@ -24,9 +24,7 @@ jobs:
           # 권한 최소화
           install -m 600 /dev/null .runtime_secrets/firebase_sa.json
           # JSON 원문 기록 (개행/유니코드 보존)
-          cat > .runtime_secrets/firebase_sa.json <<'EOF'
-          ${FIREBASE_SA_JSON}
-          EOF
+          printf '%s' "$FIREBASE_SA_JSON" > .runtime_secrets/firebase_sa.json
           # Compose가 참조할 호스트 경로를 다음 스텝으로 전달
           echo "FIREBASE_SA_FILE=$PWD/.runtime_secrets/firebase_sa.json" >> $GITHUB_ENV
       - name: Diagnose workspace
