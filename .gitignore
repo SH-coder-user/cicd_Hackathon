@@ -53,14 +53,14 @@ npm-debug.log*
 yarn-debug.log*
 
 # React 빌드 산출물
-/web/build/
-/web/static/
-/web/asset-manifest.json
-/web/index.html
-/web/manifest.json
-/web/robots.txt
-/web/favicon.ico
-/web/logo*.png
+#/web/build/
+#/web/static/
+#/web/asset-manifest.json
+#/web/index.html
+#/web/manifest.json
+#/web/robots.txt
+#/web/favicon.ico
+#/web/logo*.png
 
 # Java (Spring Boot / Maven)
 /wsie-back/target/
