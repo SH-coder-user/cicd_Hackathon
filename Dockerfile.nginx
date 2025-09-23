@@ -1,0 +1,10 @@
+# Dockerfile.nginx
+FROM nginx:stable
+
+# nginx 설정 반영
+COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+
+# 정적 파일 복사 (빌드 산출물 또는 웹 폴더)
+# (만약 React/Vite면 CI에서 먼저 npm run build 해서 web/build 로 만들고 그 폴더를 COPY)
+COPY web/ /usr/share/nginx/html/
+
