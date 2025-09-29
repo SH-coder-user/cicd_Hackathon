@@ -1,0 +1,101 @@
+:root{
+  /* 기본(디폴트) 토큰 — 초기 테마 */
+  --bg-page:#ffffff;
+  --bar:#FDC4AC;
+  --cta:#F59A5D;
+  --text:#2D1E17;
+  --white:#fff;
+  --hair:#EBD9CF;
+  --radius:24px;
+  --gap:24px;
+  --maxw:1920px;
+
+  /* (옵션) 테마 전환 부드럽게 */
+  --theme-transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+*{ box-sizing:border-box; }
+html,body{
+  margin:0;
+  background:var(--bg-page);
+  color:var(--text);
+  font-family: Inter, Pretendard, system-ui, -apple-system, "Noto Sans KR", sans-serif;
+  transition: var(--theme-transition);
+  color-scheme: light dark;
+}
+a{ color:inherit; text-decoration:none; }
+
+/* 전역 레이아웃 프리미티브만 유지 */
+.container{ width:100%; max-width:var(--maxw); margin:0 auto; padding:0 var(--gap); }
+.section{ padding:40px 0; }
+
+/* ===== Theme presets (맨 아래 추가) ===== */
+:root[data-theme="peach"]{
+  --bg-page:#ffffff; --text:#2D1E17;
+  --bar:#FDC4AC;     --hair:#EBD9CF; --cta:#F59A5D;
+}
+:root[data-theme="teal"]{
+  --bg-page:#F0F7F8; --text:#0F2628;
+  --bar:#76A9B2;     --hair:rgba(255,255,255,.25); --cta:#3F6E73;
+}
+:root[data-theme="dark"]{
+  --bg-page:#101414; --text:#EDEDED;
+  --bar:#1E2A2A;     --hair:#2B3A3A;               --cta:#3FA39C;
+}
+/* ===== Extra theme presets ===== */
+:root[data-theme="sunset"]{
+  --bg-page:#FFF8F0; --text:#2D1E17;
+  --bar:#E59A2A;     --hair:#F3C77D; --cta:#D9780E;
+}
+:root[data-theme="sand"]{
+  --bg-page:#FFFAF3; --text:#2D1E17;
+  --bar:#EADCC8;     --hair:#D6C6AE; --cta:#C9973C;
+}
+:root[data-theme="navy"]{
+  --bg-page:#F4F7FB; --text:#EDEDED;
+  --bar:#2F436B;     --hair:#8A96AB; --cta:#274064;
+}
+:root[data-theme="chestnut"]{
+  --bg-page:#FFF7F0; --text:#F3ECE7;
+  --bar:#8B3F0B;     --hair:#C08E5F; --cta:#6F3209;
+}
+:root[data-theme="forest"]{
+  --bg-page:#F3F7F4; --text:#EDEDED;
+  --bar:#13331D;     --hair:#3C5B45; --cta:#2E7D5A;
+}
+:root[data-theme="olive"]{
+  --bg-page:#F8FAF3; --text:#2D1E17;
+  --bar:#6F7F3A;     --hair:#AEB68C; --cta:#556B2F;
+}
+:root[data-theme="stone"]{
+  --bg-page:#FBFBFA; --text:#2D1E17;
+  --bar:#D8D6CF;     --hair:#C8C6BE; --cta:#8C8C8C;
+}
+:root[data-theme="deep-teal"]{
+  --bg-page:#F2F6F6; --text:#0F2628;
+  --bar:#3F6768;     --hair:#8BA5A5; --cta:#2F5152;
+}
+:root[data-theme="sky"]{
+  --bg-page:#F4FAFD; --text:#2D1E17;
+  --bar:#78AFC4;     --hair:#B7D3DF; --cta:#4E98B5;
+}
+:root[data-theme="mint"]{
+  --bg-page:#FFFFFF; --text:#2D1E17;
+  --bar:#DFFFD0;     --hair:#BFE7B2; --cta:#8BD17A;
+}
+:root[data-theme="rose"]{
+  --bg-page:#FFF7FB; --text:#2D1E17;
+  --bar:#F2B2D8;     --hair:#E5A1C7; --cta:#D675A8;
+}
+:root[data-theme="copper"]{
+  --bg-page:#FFF7F0; --text:#2D1E17;
+  --bar:#BF6A2A;     --hair:#E8B289; --cta:#A8541B;
+}
+
+/* (옵션) OS 다크를 기본으로 — data-theme가 없을 때만 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg-page:#101414; --text:#EDEDED;
+    --bar:#1E2A2A;     --hair:#2B3A3A; --cta:#3FA39C;
+  }
+}

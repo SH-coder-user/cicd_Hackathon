@@ -1,0 +1,74 @@
+/* 컨테이너: 좌측 버튼, 중앙 페이지, 우측 홈 버튼 */
+.rb-wrap {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 8px 0 8px;
+}
+
+/* 좌측 그룹 */
+.rb-left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* 중앙 페이지 텍스트 */
+.rb-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rb-page {
+  font-weight: 700;
+  color: #2f3133;
+  letter-spacing: 1px;
+}
+
+/* 우측 그룹 */
+.rb-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* <, > 아이콘 버튼 (작은 둥근 사각형) */
+.rb-icon {
+  width: 40px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid #e3e6ed;
+  background: #ffffff;
+  font-size: 16px;
+  line-height: 1;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  transition: transform .06s ease, background .12s ease, box-shadow .12s ease;
+}
+.rb-icon:hover { transform: translateY(-1px); background: #f7f9fc; }
+.rb-icon:active { transform: translateY(0); }
+.rb-icon:focus-visible { outline: 2px solid #a7c0ff; outline-offset: 2px; }
+
+/* 홈으로 이동 (보라빛 알약 버튼) */
+.rb-home {
+  border: 1px solid #E3E6ED;
+  background: #EEF2FF;              /* 연보라 톤 */
+  color: #2b2f36;
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.04);
+  transition: transform .06s ease, filter .12s ease;
+}
+.rb-home:hover { filter: brightness(0.98); transform: translateY(-1px); }
+.rb-home:active { transform: translateY(0); }
+.rb-home:focus-visible { outline: 2px solid #a7c0ff; outline-offset: 2px; }
+
+/* 반응형 */
+@media (max-width: 640px) {
+  .rb-icon { width: 36px; height: 34px; }
+  .rb-home { padding: 9px 14px; border-radius: 12px; }
+}

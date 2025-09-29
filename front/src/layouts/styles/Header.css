@@ -1,0 +1,43 @@
+/* ==== Header: fixed palette (sage) ==== */
+.site-header{
+  background:#C9D3A7;           /* 헤더 배경 */
+  border-bottom:1px solid #B7C391;
+}
+.header-inner{ height:120px; display:flex; align-items:center; gap:var(--gap); }
+
+.logo{
+  font-size:48px; font-weight:900; letter-spacing:-.5px;
+  color:#7E8E56;                 /* 로고 텍스트 */
+}
+
+.nav{
+  display:flex; gap:56px;
+  margin-left:auto; margin-right:auto;
+  font-weight:800; letter-spacing:.4px;
+  color:#5F6F42;                 /* 기본 네비 색 */
+}
+.nav a{ opacity:.95; }
+.nav a:hover{ opacity:1; color:#3D4A2A; text-decoration:underline; }
+.nav a.active{ color:#2E3A1F; text-decoration:underline; } /* 현재 메뉴 표시 (선택) */
+
+.btn{
+  height:56px; padding:0 28px; border-radius:999px; border:0;
+  display:inline-flex; align-items:center; justify-content:center;
+  font-weight:900; cursor:pointer;
+}
+.btn-login{
+  background:#8EA971;            /* 로그인 버튼 배경 */
+  color:#fff;
+}
+.btn-login:hover{ background:#7D965F; }
+
+/* 반응형 최소 */
+@media (max-width:1280px){
+  .header-inner{ height:96px; }
+  .logo{ font-size:36px; }
+  .nav{ gap:32px; }
+  .btn{ height:48px; }
+}
+@media (max-width:920px){
+  .nav{ display:none; }
+}

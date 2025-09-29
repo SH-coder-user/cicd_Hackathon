@@ -1,0 +1,39 @@
+.rf-wrap{
+  display:grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items:center;
+  gap:12px;
+  padding:14px 8px 0 8px;
+  margin-top: 12px;          /* 상단 그리드와 간격 */
+}
+
+.rf-center{
+  text-align:center;
+  font-weight:700;
+  color:#2f3133;
+  letter-spacing:1px;
+}
+
+.rf-right{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.rf-home{
+  border:1px solid #E3E6ED;
+  background:#EEF2FF;
+  color:#2b2f36;
+  padding:10px 18px;
+  border-radius:14px;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:0 2px 0 rgba(0,0,0,0.04);
+  transition:transform .06s ease, filter .12s ease;
+}
+.rf-home:hover{ filter:brightness(0.98); transform:translateY(-1px); }
+.rf-home:active{ transform:translateY(0); }
+.rf-home:focus-visible{ outline:2px solid #a7c0ff; outline-offset:2px; }
+
+@media (max-width:640px){
+  .rf-home{ padding:9px 14px; border-radius:12px; }
+}

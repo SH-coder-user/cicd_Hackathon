@@ -1,0 +1,121 @@
+/* ==== Footer: fixed palette (moss) ==== */
+.site-footer{
+  background:#83996B;              /* 푸터 배경 */
+  border-top:1px solid #6D8354;
+}
+.footer-inner{ padding:56px 0 64px; }
+
+.footer-grid{
+  display:grid; gap:40px;
+  grid-template-columns: repeat(4, 1fr) auto;
+  align-items:start;
+}
+
+.ft-col h4{
+  margin:0 0 16px; color:#ffffff; font-size:28px; font-weight:800;
+}
+.ft-col ul{ margin:0; padding:0; list-style:none; }
+.ft-col li{
+  margin:10px 0; font-size:18px; font-weight:800;
+  color:#EAF1E2;                   /* 이름 컬러(밝은 톤) */
+}
+
+.ft-cta{ display:flex; align-items:flex-start; justify-content:flex-end; }
+.btn-signup{
+  background:#6E8B55;              /* SIGN UP 버튼 */
+  color:#fff;
+  height:64px; padding:0 36px; border-radius:999px;
+  font-size:22px; font-weight:900; border:0; cursor:pointer;
+}
+.btn-signup:hover{ background:#627A4C; }
+
+/* responsive */
+@media (max-width:1280px){
+  .btn-signup{ height:56px; }
+}
+@media (max-width:920px){
+  .footer-grid{ grid-template-columns: repeat(2, 1fr); }
+  .ft-cta{ justify-content:end; }
+}
+@media (max-width:520px){
+  .footer-grid{ grid-template-columns: 1fr; }
+  .ft-cta{ justify-content:start; }
+  .btn-signup{ width:100%; }
+}
+
+/* ===== Viewport-fixed Quick FAB ===== */
+.quick-fab{
+  position: fixed;                 /* 스크롤과 무관하게 화면 기준 */
+  right: max(24px, env(safe-area-inset-right));
+  bottom: max(24px, env(safe-area-inset-bottom));
+  z-index: 9999;
+}
+.quick-fab__btn{
+  width:56px; height:56px; border-radius:999px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border:1px solid rgba(0,0,0,.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  display:inline-flex; align-items:center; justify-content:center;
+  cursor:pointer; position:relative;
+}
+
+/* 3줄 버거 */
+.quick-fab__btn .burger,
+.quick-fab__btn .burger::before,
+.quick-fab__btn .burger::after{
+  content:"";
+  display:block;
+  width:22px; height:2px; border-radius:2px; background: #333;
+  transition: transform .18s ease, opacity .18s ease;
+}
+.quick-fab__btn .burger{ position:relative; }
+.quick-fab__btn .burger::before{ position:absolute; left:0; transform:translateY(-6px); }
+.quick-fab__btn .burger::after { position:absolute; left:0; transform:translateY( 6px); }
+/* 열린 상태 X */
+.quick-fab.is-open .burger{ background:transparent; }
+.quick-fab.is-open .burger::before{ transform: rotate(45deg); }
+.quick-fab.is-open .burger::after { transform: rotate(-45deg); }
+
+/* 오버레이 */
+.quick-fab__backdrop{
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.25);
+  z-index: 9998;
+}
+
+/* 메뉴(위로 뜸) */
+.quick-fab__menu{
+  position: absolute;
+  right: 0;
+  bottom: calc(56px + 10px);    /* 버튼 높이 + 간격 */
+  min-width: 180px;
+  margin: 0; padding: 8px;
+  list-style: none;
+  background: #fff; color: #1f2937;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px;
+  box-shadow: 0 -12px 28px rgba(0,0,0,.16);
+}
+
+/* 항목 */
+.qitem{
+  width:100%; display:flex; align-items:center; gap:10px;
+  padding:10px 12px; border:0; background:transparent;
+  cursor:pointer; border-radius:10px; text-align:left; font-weight:800;
+}
+.qitem:hover{ background: rgba(0,0,0,.05); }
+.qitem.is-active{
+  outline: 2px solid rgba(0,0,0,.15);
+  outline-offset: 2px;
+}
+.qitem__icon{ width:18px; text-align:center; }
+.qitem__label{ flex:1; }
+
+/* Mobile */
+@media (max-width:520px){
+  .quick-fab{ right:16px; bottom:16px; }
+  .quick-fab__btn{ width:52px; height:52px; }
+  .quick-fab__menu{ min-width:160px; bottom: calc(52px + 8px); }
+}

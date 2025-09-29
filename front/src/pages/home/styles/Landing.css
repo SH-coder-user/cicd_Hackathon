@@ -1,0 +1,64 @@
+/* 이 페이지에선 헤더의 네비/로그인 숨김 */
+body.landing-mode .nav,
+body.landing-mode .btn-login { display: none !important; }
+
+/* 페이지 레이아웃 */
+.landing{
+  min-height: calc(100dvh - 160px); /* 헤더/푸터를 제외한 대략의 높이 */
+  display: grid;
+  place-items: center;
+  padding: 48px 0 40px;
+  text-align: center;
+  gap: 24px;
+}
+
+/* 상단 텍스트 */
+.landing__hint{
+  margin: 0 0 8px;
+  font-weight: 700;
+  color: #7A8A5B;                 /* 세이지 톤 */
+  opacity: .9;
+  letter-spacing: .3px;
+}
+.landing__title{
+  margin: 0;
+  font-weight: 900;
+  font-size: clamp(28px, 5vw, 44px);
+  color: #6B8A3C;
+  letter-spacing: -.3px;
+}
+
+/* 토마토 + 버튼 */
+.landing__hero{
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin-top: 8px;
+}
+.landing__tomato{
+  width: clamp(220px, 40vw, 360px);
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* 토마토 위의 이동 버튼(작은 리본 버튼 느낌) */
+.landing__cta{
+  position: absolute;
+  top: -80px; /* 토마토 윗부분에 살짝 겹치게 */
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 36px; padding: 0 14px;
+  border-radius: 999px;
+  font-weight: 900; font-size: 14px;
+  background: var(--cta);         /* 현재 테마 CTA 사용 */
+  color: #fff;
+  border: 0; cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,.15);
+}
+.landing__cta .arrow{ display:inline-block; transform: translateY(-1px); }
+
+/* 여백/반응형 약간 */
+@media (max-width: 520px){
+  .landing{ padding: 40px 0 28px; }
+  .landing__cta{ top: -14px; height: 34px; }
+}

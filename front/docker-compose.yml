@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  frontend:
+    build:
+      context: .
+    image: cra-frontend-8501:latest
+    container_name: cra-frontend-8501
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
