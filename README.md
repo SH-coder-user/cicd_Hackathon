@@ -1,7 +1,5 @@
 
-# 🍽️ School Meal Leftover Recipe Recommender
-
-## 2025/09/22 ~ 2025/09/23 33조 뭐해먹지 프로젝트 발표
+# 🍽️ School Meal Leftover Recipe Recommender 33조 뭐해먹지 프로젝트 발표
 
 ## 📌 프로젝트 개요
 학교 급식에서 발생하는 대량 음식물 쓰레기를 효율적으로 활용하기 위해,
