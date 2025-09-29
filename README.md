@@ -47,7 +47,8 @@ flowchart LR
 ---
 
 ## 🎥 시연 (Demo)
-<img width="1876" height="899" alt="image" src="https://github.com/user-attachments/assets/e4d9aae7-7fec-478d-b738-fd117b8b0dd2" />
+<img width="1236" height="881" alt="image" src="https://github.com/user-attachments/assets/636c34cd-9c45-4e1f-879a-4f9e716a8eba" />
+
 
 
 
