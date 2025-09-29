@@ -1,6 +1,8 @@
 
 # 🍽️ School Meal Leftover Recipe Recommender
 
+## 2025/09/22 ~ 2025/09/23 33조 뭐해먹지 프로젝트 발표
+
 ## 📌 프로젝트 개요
 학교 급식에서 발생하는 대량 음식물 쓰레기를 효율적으로 활용하기 위해,
 **멀티모달 Foundation Model**과 **Firebase DB**를 결합한 레시피 추천 시스템입니다.
@@ -50,6 +52,11 @@ flowchart LR
 <img width="1236" height="881" alt="image" src="https://github.com/user-attachments/assets/636c34cd-9c45-4e1f-879a-4f9e716a8eba" />
 
 
+[해커톤 발표용.pdf](https://github.com/user-attachments/files/22589160/default.pdf)
+
+
+
+Uploading 영상.mp4…
 
 
 ---
@@ -71,8 +78,10 @@ flowchart LR
 ---
 
 ## 👥 팀 소개
-- Backend: Firebase, API, DB 설계  
-- AI/ML: Foundation Model 연동, 데이터 추론  
-- Frontend: 이미지 업로드 & 레시피 결과 UI  
-- PM: 프로젝트 관리 및 아키텍처 설계
+- Backend 한동환, 최정재: Firebase, API, DB 설계  
+- AI/ML 김용필 : Foundation Model 연동, 데이터 추론  
+- Frontend 강지나: 이미지 업로드 & 레시피 결과 UI  
+- PM 한동환 : 프로젝트 관리 및 아키텍처 설계
+- 기획 이준용 : 프로젝트 기획 및 발표자료 정리
+- CI/CD 김성현: github Actions & Self-hosted-runner 를 이용한 Docker Service 파이프라인구축
 --
