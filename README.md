@@ -49,12 +49,12 @@ flowchart LR
 
 ---
 
-## 🎥 시연 (Demo) - 그림 클릭 시 재생
-[!<img width="1236" height="881" alt="image" src="https://github.com/user-attachments/assets/636c34cd-9c45-4e1f-879a-4f9e716a8eba" />](/docs/video.gif)
+## 🎥 시연 (Demo) - 사진 클릭 시 재생됨
+[<img width="1236" height="881" alt="image" src="https://github.com/user-attachments/assets/636c34cd-9c45-4e1f-879a-4f9e716a8eba" />](/docs/video.gif)
 
 
 ## 발표자료
-발표자료 [보기](/docs/hackathon.pdf)
+ - [발표자료 PDF](/docs/hackathon.pdf)
 ---
 
 ## 🔑 차별화 포인트
