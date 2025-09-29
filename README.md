@@ -52,12 +52,8 @@ flowchart LR
 <img width="1236" height="881" alt="image" src="https://github.com/user-attachments/assets/636c34cd-9c45-4e1f-879a-4f9e716a8eba" />
 
 
-[해커톤 발표용.pdf](https://github.com/user-attachments/files/22589160/default.pdf)
-
-
-
-Uploading 영상.mp4…
-
+[발표자료](/docs/hackathon.pdf)
+[데모 동영상](/docs/video.mp4)
 
 ---
 
