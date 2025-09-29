@@ -1,6 +1,9 @@
 
 # 🍽️ School Meal Leftover Recipe Recommender 33조
 
+## 기간
+2025/09/22 ~ 2025/09/23
+
 ## 📌 프로젝트 개요
 학교 급식에서 발생하는 대량 음식물 쓰레기를 효율적으로 활용하기 위해,
 **멀티모달 Foundation Model**과 **Firebase DB**를 결합한 레시피 추천 시스템입니다.
@@ -47,7 +50,7 @@ flowchart LR
 ---
 
 ## 🎥 시연 (Demo)
-[![watch the Demo]<img width="1236" height="881" alt="image" src="https://github.com/user-attachments/assets/636c34cd-9c45-4e1f-879a-4f9e716a8eba" />](/docs/video.mp4)
+[![watch the Demo]<img width="1236" height="881" alt="image" src="https://github.com/user-attachments/assets/636c34cd-9c45-4e1f-879a-4f9e716a8eba" />](/docs/video.gif)
 
 
 ## [발표자료](/docs/hackathon.pdf)
