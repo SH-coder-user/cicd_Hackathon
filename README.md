@@ -49,11 +49,10 @@ flowchart LR
 ---
 
 ## 🎥 시연 (Demo)
-<img width="1236" height="881" alt="image" src="https://github.com/user-attachments/assets/636c34cd-9c45-4e1f-879a-4f9e716a8eba" />
+[![watch the Demo]<img width="1236" height="881" alt="image" src="https://github.com/user-attachments/assets/636c34cd-9c45-4e1f-879a-4f9e716a8eba" />](/docs/video.mp4)
 
 
-[발표자료](/docs/hackathon.pdf)
-[데모 동영상](/docs/video.mp4)
+## [발표자료](/docs/hackathon.pdf)
 
 ---
 
